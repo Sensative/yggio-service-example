@@ -18,29 +18,26 @@ export default class DeviceList extends React.Component {
     device.subscribed = false;
     this.setState({devices: this.state.devices});
   }
-  SubscriptionButton = props => {
-    return props.item.subscribed ? (
-      <SubscribeButton
-        color='danger'
-        device={props.item}
-        method={this.unsub}>
-          Unsubscribe
-      </SubscribeButton>
-    ) : (
-      <SubscribeButton
-        color='success'
-        device={props.item}
-        method={this.sub}>
-          Subscribe
-      </SubscribeButton>
-    );
-  }
   makeList = () => {
     return this.props.devices.map((item, idx) => {
       return (
         <li className="deviceLi" key={idx}>
           <span>{item.name}</span>
-          <this.SubscriptionButton item={item} />
+          {item.subscribed ? (
+            <SubscribeButton
+              color='danger'
+              device={item}
+              method={this.unsub}>
+                Unsubscribe
+            </SubscribeButton>
+          ) : (
+            <SubscribeButton
+              color='success'
+              device={item}
+              method={this.sub}>
+                Subscribe
+            </SubscribeButton>
+          )}
         </li>
       );
     })
