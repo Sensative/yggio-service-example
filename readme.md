@@ -26,8 +26,8 @@ The backend is configured in `backend/src/config/common.js`:
 
 ```js
 // The host of yggio-service-example backend
-// Will be localhost if backend is run locally
-const BACKEND_HOST = 'localhost';
+// Will be 127.0.0.1 if backend is run locally
+const BACKEND_HOST = '127.0.0.1';
 
 // The port used by the yggio-service-example backend
 // Should be the same as in frontend/src/constants/index.js
@@ -43,12 +43,12 @@ const FRONTEND_PORT = '9492';
 
 // The URL of the REST API of the Yggio you want to use
 // Should be the same as in frontend/src/constants/index.js
-// https://api.yggio-sandbox.sensative.net is a suitable test server and is set as default
-const YGGIO_API_URL = 'https://api.yggio-sandbox.sensative.net';
+// https://staging.yggio.net is a suitable test server and is set as default
+const YGGIO_API_URL = 'https://staging.yggio.net/';
 
 // The name of the provider that is created
 // Can be set to anything
-const PROVIDER_NAME = '';
+const CLIENT_NAME = '';
 
 // Username of the user that creates the provider
 // Can be set to anything
@@ -64,7 +64,6 @@ The frontend is configured in `frontend/src/constants/index.js`:
 ```js
 export const statStr = {
   backendHost: 'http://localhost:9999',
-  portalHost: 'https://portal.yggio-sandbox.sensative.net'
 };
 ```
 
