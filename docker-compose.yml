@@ -1,0 +1,22 @@
+version: "2.3"
+
+services:  
+  yggio-service-example-client:
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    container_name: yggio-service-example-client
+    hostname: yggio-service-example-client
+    restart: always
+    environment:
+      - TEST=test
+
+  yggio-service-example-api:
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    container_name: yggio-service-example-api
+    hostname: yggio-service-example-api
+    restart: always
+    environment:
+      - TEST=test

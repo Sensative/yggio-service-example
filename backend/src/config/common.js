@@ -25,15 +25,15 @@ const YGGIO_API_URL = 'https://api.yggio-sandbox.sensative.net';
 
 // The name of the client that is created
 // Can be set to anything
-const CLIENT_NAME = '';
+const CLIENT_NAME = 'test';
 
 // Username of the user that creates the client
 // Can be set to anything
-const YGGIO_ACCOUNT_USERNAME = '';
+const YGGIO_ACCOUNT_USERNAME = 'test';
 
 // Password of the user that creates the client
 // Can be set to anything
-const YGGIO_ACCOUNT_PASSWORD = '';
+const YGGIO_ACCOUNT_PASSWORD = 'test';
 
 module.exports = {
   BACKEND_HOST,
